@@ -1,0 +1,143 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background: linear-gradient(135deg, #ffefd5, #ffe4e1);
+    color: #333;
+}
+
+header {
+    background-color: #ffcb05;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+header .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #2d3436;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #2d3436;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.memes .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+
+.memes article {
+    width: 250px;
+    aspect-ratio: 5 / 7;
+    background: #fff;
+    border: 3px solid #3b4cca;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+.memes article h3 {
+    background-color: #3b4cca;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+
+.memes article img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex-grow: 1;
+}
+
+
+.memes article p {
+    padding: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: #f0f0f0;
+    flex-shrink: 0;
+}
+
+
+.memes article a {
+    display: inline-block;
+    margin: 5px 8px;
+    padding: 6px 12px;
+    background-color: #3b4cca;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.memes article a:hover {
+    background-color: #5d7fff;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 800px) {
+    .memes .container {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .memes .container {
+    grid-template-columns: 1fr;
+    }
+}
+
+
+footer {
+    background-color: #ffcb05;
+    color: #2d3436;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
